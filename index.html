@@ -1,1 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f5f7">
+  <meta name="description" content="Invergent explores how people expand possibilities, narrow decisions, and move between divergent and convergent thinking.">
+  <title>Invergent — Think Wider. Decide Better.</title>
+  <style>
+    :root{
+      --bg:#f5f5f7;
+      --ink:#111827;
+      --muted:#667085;
+      --line:rgba(17,24,39,.08);
+      --card:rgba(255,255,255,.72);
+      --white:rgba(255,255,255,.92);
+      --blue:#007aff;
+      --purple:#5856d6;
+      --green:#34c759;
+      --shadow:0 24px 70px rgba(17,24,39,.10),0 4px 14px rgba(17,24,39,.05);
+      --radius:30px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      min-height:100vh;
+      color:var(--ink);
+      font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Arial,sans-serif;
+      background:
+        radial-gradient(circle at 12% 2%,rgba(0,122,255,.12),transparent 28%),
+        radial-gradient(circle at 88% 5%,rgba(88,86,214,.11),transparent 25%),
+        radial-gradient(circle at 50% 100%,rgba(52,199,89,.07),transparent 30%),
+        var(--bg);
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+    a{text-decoration:none;color:inherit}
+    .wrap{width:min(1100px,calc(100% - 32px));margin:0 auto}
+    .nav{
+      height:72px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+    .brand{
+      font-weight:800;
+      font-size:18px;
+      letter-spacing:-.03em;
+    }
+    .brand-mark{
+      display:inline-grid;
+      place-items:center;
+      width:28px;
+      height:28px;
+      margin-right:8px;
+      border-radius:9px;
+      background:linear-gradient(135deg,var(--blue),var(--purple));
+      color:#fff;
+      font-size:15px;
+      vertical-align:-4px;
+      box-shadow:0 8px 22px rgba(0,122,255,.22);
+    }
+    .nav-note{
+      color:var(--muted);
+      font-size:13px;
+    }
+    main{padding:34px 0 76px}
+    .hero{
+      position:relative;
+      overflow:hidden;
+      padding:78px 56px 52px;
+      border:1px solid rgba(255,255,255,.86);
+      border-radius:36px;
+      background:var(--card);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(28px);
+      -webkit-backdrop-filter:blur(28px);
+    }
+    .hero::before,
+    .hero::after{
+      content:"";
+      position:absolute;
+      border-radius:50%;
+      pointer-events:none;
+      filter:blur(2px);
+    }
+    .hero::before{
+      width:420px;height:420px;
+      right:-180px;top:-170px;
+      background:radial-gradient(circle,rgba(0,122,255,.18),transparent 67%);
+    }
+    .hero::after{
+      width:360px;height:360px;
+      left:-180px;bottom:-210px;
+      background:radial-gradient(circle,rgba(88,86,214,.12),transparent 66%);
+    }
+    .eyebrow{
+      position:relative;
+      z-index:1;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(0,122,255,.08);
+      color:var(--blue);
+      font-size:12px;
+      font-weight:750;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    h1{
+      position:relative;
+      z-index:1;
+      max-width:860px;
+      margin:20px 0 18px;
+      font-size:clamp(48px,8vw,88px);
+      line-height:.95;
+      letter-spacing:-.065em;
+    }
+    h1 .accent{
+      background:linear-gradient(90deg,var(--blue),var(--purple));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+    .lead{
+      position:relative;
+      z-index:1;
+      max-width:760px;
+      margin:0;
+      color:#4b5563;
+      font-size:19px;
+      line-height:1.6;
+    }
+    .formula{
+      position:relative;
+      z-index:1;
+      margin-top:30px;
+      display:inline-flex;
+      flex-wrap:wrap;
+      align-items:center;
+      gap:10px;
+      padding:12px 14px;
+      border-radius:16px;
+      background:rgba(17,24,39,.045);
+      border:1px solid var(--line);
+      color:#475467;
+      font-size:14px;
+      font-weight:650;
+    }
+    .formula b{color:#111827}
+    .arrow{color:#98a2b3}
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+      margin-top:18px;
+    }
+    .card{
+      position:relative;
+      overflow:hidden;
+      min-height:360px;
+      padding:34px;
+      border:1px solid rgba(255,255,255,.84);
+      border-radius:30px;
+      background:var(--card);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(26px);
+      -webkit-backdrop-filter:blur(26px);
+      transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    }
+    .card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 30px 80px rgba(17,24,39,.13),0 5px 18px rgba(17,24,39,.06);
+      border-color:rgba(0,122,255,.14);
+    }
+    .card::after{
+      content:"";
+      position:absolute;
+      width:210px;height:210px;
+      right:-80px;bottom:-90px;
+      border-radius:50%;
+      pointer-events:none;
+    }
+    .card.profile::after{background:radial-gradient(circle,rgba(0,122,255,.16),transparent 68%)}
+    .card.learn::after{background:radial-gradient(circle,rgba(52,199,89,.15),transparent 68%)}
+    .icon{
+      display:grid;
+      place-items:center;
+      width:58px;height:58px;
+      border-radius:18px;
+      color:#fff;
+      font-size:25px;
+      box-shadow:0 10px 24px rgba(17,24,39,.13);
+    }
+    .profile .icon{background:linear-gradient(135deg,#007aff,#5856d6)}
+    .learn .icon{background:linear-gradient(135deg,#34c759,#007aff)}
+    .tag{
+      display:inline-block;
+      margin-top:22px;
+      color:var(--muted);
+      font-size:12px;
+      font-weight:750;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    h2{
+      margin:8px 0 10px;
+      font-size:30px;
+      line-height:1.08;
+      letter-spacing:-.04em;
+    }
+    .card p{
+      margin:0;
+      max-width:500px;
+      color:#667085;
+      line-height:1.62;
+      font-size:15px;
+    }
+    .bullets{
+      display:grid;
+      gap:8px;
+      margin:22px 0 28px;
+      color:#475467;
+      font-size:14px;
+    }
+    .bullets span::before{
+      content:"";
+      display:inline-block;
+      width:7px;height:7px;
+      margin:0 10px 1px 0;
+      border-radius:50%;
+      background:currentColor;
+      opacity:.48;
+    }
+    .cta{
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      padding:13px 16px;
+      border-radius:999px;
+      color:#fff;
+      background:#111827;
+      font-size:14px;
+      font-weight:750;
+      box-shadow:0 8px 20px rgba(17,24,39,.16);
+      transition:transform .15s ease;
+    }
+    .cta:hover{transform:translateY(-1px)}
+    .footer{
+      padding:26px 6px 0;
+      text-align:center;
+      color:#98a2b3;
+      font-size:12px;
+      line-height:1.6;
+    }
+    .footer strong{color:#667085}
+    @media (max-width:780px){
+      .wrap{width:min(100% - 18px,680px)}
+      .nav{height:62px}
+      main{padding-top:18px}
+      .hero{padding:44px 24px 36px;border-radius:28px}
+      .cards{grid-template-columns:1fr}
+      .card{min-height:auto;padding:28px 24px}
+      .lead{font-size:17px}
+      h1{font-size:54px}
+    }
+    @media (max-width:520px){
+      .nav-note{display:none}
+      h1{font-size:46px}
+      .formula{line-height:1.7}
+    }
+  </style>
+</head>
+<body>
+  <header class="wrap nav">
+    <a href="./index.html" class="brand" aria-label="Invergent home">
+      <span class="brand-mark">↔</span>invergent
+    </a>
+    <div class="nav-note">A small experiment in how we think.</div>
+  </header>
 
+  <main class="wrap">
+    <section class="hero">
+      <div class="eyebrow">Divergence × Convergence</div>
+
+      <h1>
+        Think <span class="accent">wider.</span><br>
+        Decide <span class="accent">better.</span>
+      </h1>
+
+      <p class="lead">
+        <strong>Invergent</strong> is an experimental space for understanding and training the
+        two complementary movements of thinking: opening the possibility space, then narrowing it
+        into a meaningful direction.
+      </p>
+
+      <div class="formula" aria-label="Thinking cycle">
+        <b>Explore</b><span class="arrow">→</span>
+        <b>Expand</b><span class="arrow">→</span>
+        <b>Connect</b><span class="arrow">→</span>
+        <b>Focus</b><span class="arrow">→</span>
+        <b>Build</b>
+      </div>
+    </section>
+
+    <section class="cards" aria-label="Invergent tools">
+      <a class="card profile" href="./profile.html">
+        <div class="icon" aria-hidden="true">◌</div>
+        <div class="tag">Discover your pattern</div>
+        <h2>Profile</h2>
+        <p>
+          Explore whether your responses tend to favor <strong>divergent thinking</strong>,
+          <strong>convergent thinking</strong>, or the ability to move between both.
+        </p>
+        <div class="bullets">
+          <span>Heuristic cognitive profile</span>
+          <span>Divergence &amp; convergence dimensions</span>
+          <span>Runs locally in your browser</span>
+        </div>
+        <span class="cta">Explore my profile <span aria-hidden="true">→</span></span>
+      </a>
+
+      <a class="card learn" href="./learn.html">
+        <div class="icon" aria-hidden="true">✦</div>
+        <div class="tag">Practice the skill</div>
+        <h2>Learn</h2>
+        <p>
+          Train yourself to deliberately switch modes: generate more possibilities,
+          recognize constraints, compare alternatives, and make clearer decisions.
+        </p>
+        <div class="bullets">
+          <span>Exercises for divergent thinking</span>
+          <span>Exercises for convergent thinking</span>
+          <span>Practice switching between modes</span>
+        </div>
+        <span class="cta">Start learning <span aria-hidden="true">→</span></span>
+      </a>
+    </section>
+
+    <footer class="footer">
+      <strong>Divergence creates possibilities.</strong>
+      Convergence creates direction.
+      <strong>Invergent thinking connects the two.</strong>
+    </footer>
+  </main>
+</body>
+</html>
