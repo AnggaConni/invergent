@@ -1,0 +1,337 @@
+{
+  "version": "1.0.0",
+  "meta": {
+    "name": "Invergent",
+    "description": "An original experimental framework for practicing and exploring divergent, convergent, and switching modes of thinking.",
+    "notice": "This is an experimental heuristic prototype, not a clinical diagnosis or a validated psychometric instrument.",
+    "domainLexicon": {
+      "education": ["education","school","class","teacher","student","learning","library"],
+      "business": ["business","shop","store","market","sale","office","work","service"],
+      "art": ["art","music","game","film","photo","creative","museum","story"],
+      "science": ["science","lab","research","sensor","data","technology","ai","robot"],
+      "environment": ["environment","recycle","water","forest","climate","energy","waste","plastic"],
+      "community": ["community","social","public","health","safety","emergency","city"],
+      "mobility": ["transport","bike","car","vehicle","travel","mobile","map","navigation"],
+      "home": ["home","garden","food","kitchen","furniture","house","storage"]
+    }
+  },
+  "profile": {
+    "tasks": [
+      {
+        "id": "d1",
+        "type": "divergent",
+        "seconds": 90,
+        "question": "You have one empty shipping container. What could it become?",
+        "hint": "List as many distinct uses as you can. One idea per line.",
+        "input": "textarea",
+        "placeholder": "One idea per line…",
+        "scoring": { "method": "divergent_text", "dimension": "divergence", "maxIdeas": 14 }
+      },
+      {
+        "id": "c1",
+        "type": "convergent",
+        "seconds": 45,
+        "question": "A school has 30 days, $1,000, and one teacher. Which first intervention is most defensible?",
+        "hint": "Choose one option. Focus on constraints and impact.",
+        "input": "choice",
+        "choices": [
+          { "id": "A", "title": "Buy tablets for every student", "description": "High upfront cost; ongoing maintenance." },
+          { "id": "B", "title": "Create a teacher-led digital learning club with shared devices", "description": "Low infrastructure burden; immediately testable." },
+          { "id": "C", "title": "Build a new computer laboratory", "description": "Useful long-term, but unlikely to finish within 30 days." },
+          { "id": "D", "title": "Launch a nationwide social media campaign", "description": "Broad reach, but weak control over local learning outcomes." }
+        ],
+        "answer": "B",
+        "scoring": { "method": "choice", "dimension": "convergence" }
+      },
+      {
+        "id": "d2",
+        "type": "divergent",
+        "seconds": 75,
+        "question": "Imagine a city park with no electricity. What could it be used for at night?",
+        "hint": "Go beyond the obvious. Try different domains.",
+        "input": "textarea",
+        "placeholder": "Think across different domains…",
+        "scoring": { "method": "divergent_text", "dimension": "divergence", "maxIdeas": 14 }
+      },
+      {
+        "id": "c2",
+        "type": "convergent",
+        "seconds": 45,
+        "question": "A team must deliver one prototype tomorrow. Which rule should dominate the decision?",
+        "hint": "Choose the strongest general decision rule.",
+        "input": "choice",
+        "choices": [
+          { "id": "A", "title": "Pick the most original idea", "description": "Originality matters, but may ignore feasibility." },
+          { "id": "B", "title": "Pick the idea with the longest feature list", "description": "More features do not guarantee value." },
+          { "id": "C", "title": "Pick the smallest testable idea that addresses the core problem", "description": "Balances speed, evidence, and learning." },
+          { "id": "D", "title": "Pick the idea everyone likes most", "description": "Consensus can hide weak assumptions." }
+        ],
+        "answer": "C",
+        "scoring": { "method": "choice", "dimension": "convergence" }
+      },
+      {
+        "id": "d3",
+        "type": "divergent",
+        "seconds": 75,
+        "question": "A broken smartphone is found in a drawer. What could you do with it?",
+        "hint": "Think beyond repair, recycling, or selling it.",
+        "input": "textarea",
+        "placeholder": "One possibility per line…",
+        "scoring": { "method": "divergent_text", "dimension": "divergence", "maxIdeas": 14 }
+      },
+      {
+        "id": "c3",
+        "type": "convergent",
+        "seconds": 45,
+        "question": "You have four proposals with equal cost. Which should be selected for the next test?",
+        "hint": "Use the strongest evidence-to-decision principle.",
+        "input": "choice",
+        "choices": [
+          { "id": "A", "title": "The proposal with the coolest presentation", "description": "Presentation quality is weak evidence of impact." },
+          { "id": "B", "title": "The proposal supported by measurable results", "description": "Evidence reduces uncertainty." },
+          { "id": "C", "title": "The proposal from the most senior person", "description": "Seniority is not outcome evidence." },
+          { "id": "D", "title": "The proposal with the most pages", "description": "Length is not rigor." }
+        ],
+        "answer": "B",
+        "scoring": { "method": "choice", "dimension": "convergence" }
+      },
+      {
+        "id": "d4",
+        "type": "divergent",
+        "seconds": 75,
+        "question": "How could a school desk be redesigned for purposes other than sitting and writing?",
+        "hint": "Generate varied functions, not just cosmetic changes.",
+        "input": "textarea",
+        "placeholder": "Try functions from unrelated domains…",
+        "scoring": { "method": "divergent_text", "dimension": "divergence", "maxIdeas": 14 }
+      },
+      {
+        "id": "c4",
+        "type": "convergent",
+        "seconds": 45,
+        "question": "A project has 20 possible features but capacity for only 5. What is the best next move?",
+        "hint": "Choose the most defensible prioritization rule.",
+        "input": "choice",
+        "choices": [
+          { "id": "A", "title": "Let each team pick their favorite five", "description": "May create fragmented priorities." },
+          { "id": "B", "title": "Implement the five easiest features", "description": "Ease is not the same as value." },
+          { "id": "C", "title": "Rank features by user value, risk, and effort", "description": "Makes trade-offs explicit." },
+          { "id": "D", "title": "Keep all 20 and work faster", "description": "Ignores the capacity constraint." }
+        ],
+        "answer": "C",
+        "scoring": { "method": "choice", "dimension": "convergence" }
+      },
+      {
+        "id": "d5",
+        "type": "divergent",
+        "seconds": 75,
+        "question": "What are unusual ways a map could be used?",
+        "hint": "Think across education, art, science, games, business, and daily life.",
+        "input": "textarea",
+        "placeholder": "Think beyond navigation…",
+        "scoring": { "method": "divergent_text", "dimension": "divergence", "maxIdeas": 14 }
+      },
+      {
+        "id": "c5",
+        "type": "convergent",
+        "seconds": 45,
+        "question": "A survey response conflicts with sensor data. What should happen first?",
+        "hint": "Choose the most defensible first step.",
+        "input": "choice",
+        "choices": [
+          { "id": "A", "title": "Delete the survey response", "description": "Too early; disagreement needs investigation." },
+          { "id": "B", "title": "Trust the sensor automatically", "description": "Sensors can also fail or be misconfigured." },
+          { "id": "C", "title": "Check the measurement definitions and data quality", "description": "Clarifies whether the sources are actually comparable." },
+          { "id": "D", "title": "Average the two values", "description": "Combines disagreement without explaining it." }
+        ],
+        "answer": "C",
+        "scoring": { "method": "choice", "dimension": "convergence" }
+      },
+      {
+        "id": "d6",
+        "type": "divergent",
+        "seconds": 75,
+        "question": "Give as many ways as possible to make a boring meeting more useful without reducing its purpose.",
+        "hint": "Mix process, technology, environment, incentives, and communication.",
+        "input": "textarea",
+        "placeholder": "Generate different interventions…",
+        "scoring": { "method": "divergent_text", "dimension": "divergence", "maxIdeas": 14 }
+      },
+      {
+        "id": "c6",
+        "type": "convergent",
+        "seconds": 45,
+        "question": "A solution works in a pilot but fails at scale. Which question should come first?",
+        "hint": "Choose the best diagnostic question.",
+        "input": "choice",
+        "choices": [
+          { "id": "A", "title": "Who is to blame?", "description": "Does not identify the system constraint." },
+          { "id": "B", "title": "What changed between the pilot context and the scaled context?", "description": "Targets the difference most likely to explain the failure." },
+          { "id": "C", "title": "Can we make the presentation better?", "description": "Does not address scaling mechanics." },
+          { "id": "D", "title": "Can we run the same pilot again?", "description": "Repeating without diagnosis may reproduce the failure." }
+        ],
+        "answer": "B",
+        "scoring": { "method": "choice", "dimension": "convergence" }
+      },
+      {
+        "id": "s1",
+        "type": "switching",
+        "seconds": 90,
+        "question": "First, generate as many solutions as possible for reducing plastic waste in a school. Then select ONE solution and explain why it should be tested first.",
+        "hint": "Write many ideas first, then clearly mark your final choice with “FINAL:” on a new line.",
+        "input": "textarea",
+        "placeholder": "Ideas first…\n\nFINAL: …",
+        "scoring": { "method": "switch_text", "dimension": "switching", "maxIdeas": 8, "finalMarker": "FINAL:" }
+      },
+      {
+        "id": "s2",
+        "type": "switching",
+        "seconds": 90,
+        "question": "Imagine an empty warehouse. Explore several possible uses, then choose one based on a 30-day deadline and limited budget.",
+        "hint": "Explore first; converge second. Put your final decision on a new line beginning with “FINAL:”.",
+        "input": "textarea",
+        "placeholder": "Explore several directions…\n\nFINAL: …",
+        "scoring": { "method": "switch_text", "dimension": "switching", "maxIdeas": 8, "finalMarker": "FINAL:" }
+      }
+    ]
+  },
+  "learn": {
+    "exercises": [
+      {
+        "id": "d1",
+        "type": "divergent",
+        "seconds": 60,
+        "title": "One object. Many possibilities.",
+        "hint": "Generate as many distinct uses as you can. Try to cross domains rather than producing variations of the same idea.",
+        "prompt": "You have one ordinary cardboard box. What could it become?",
+        "input": "textarea",
+        "placeholder": "One idea per line…",
+        "chips": ["education","business","art","science","daily life"],
+        "feedback": {
+          "low": "Try another domain or perspective before you narrow anything down.",
+          "mid": "Keep opening the search space. Add ideas from unrelated domains.",
+          "high": "Good divergence. You are expanding the search space rather than repeating one idea."
+        }
+      },
+      {
+        "id": "c1",
+        "type": "convergent",
+        "seconds": 45,
+        "title": "Choose under constraints.",
+        "hint": "There is no perfect answer. Pick the option that best fits the stated constraints and explain your reasoning.",
+        "prompt": "A school has 30 days, a $1,000 budget, and one teacher. Which intervention should be tested first?",
+        "input": "choice",
+        "choices": [
+          { "id": "A", "title": "Buy tablets for every student", "description": "High upfront cost and maintenance." },
+          { "id": "B", "title": "Create a teacher-led digital learning club with shared devices", "description": "Lower infrastructure burden and immediately testable." },
+          { "id": "C", "title": "Build a new computer laboratory", "description": "Useful long term, but difficult to complete within 30 days." },
+          { "id": "D", "title": "Launch a large social media campaign", "description": "Broad reach, but weak connection to the stated learning constraint." }
+        ],
+        "answer": "B",
+        "criteria": [
+          ["Constraint","Fit the time and budget"],
+          ["Evidence","Potential for a useful test"],
+          ["Trade-off","Avoid solving a different problem"]
+        ]
+      },
+      {
+        "id": "d2",
+        "type": "divergent",
+        "seconds": 60,
+        "title": "Change the frame.",
+        "hint": "Generate possibilities from different perspectives: user, place, technology, nature, social life, or play.",
+        "prompt": "How could an empty city park be useful at night without permanent electricity?",
+        "input": "textarea",
+        "placeholder": "Think across different domains…",
+        "chips": ["safety","education","culture","business","community","games"],
+        "feedback": {
+          "low": "Change perspective. What would a teacher, artist, tourist, child, or emergency planner do with the same space?",
+          "mid": "Try one idea from a completely different domain.",
+          "high": "Strong reframing. Your ideas are moving beyond the obvious use."
+        }
+      },
+      {
+        "id": "c2",
+        "type": "convergent",
+        "seconds": 45,
+        "title": "Make the next decision smaller.",
+        "hint": "Good convergence reduces uncertainty without pretending certainty is perfect.",
+        "prompt": "A team has 20 possible product features but capacity to build only 5. What should it do first?",
+        "input": "choice",
+        "choices": [
+          { "id": "A", "title": "Let everyone choose their favorite five", "description": "Fast, but priorities may conflict." },
+          { "id": "B", "title": "Choose the five easiest features", "description": "Ease is not the same as value." },
+          { "id": "C", "title": "Rank features by user value, risk, and effort", "description": "Makes the trade-offs explicit." },
+          { "id": "D", "title": "Keep all 20 and simply work faster", "description": "Ignores the capacity constraint." }
+        ],
+        "answer": "C",
+        "criteria": [
+          ["Value","What matters to users?"],
+          ["Risk","What could fail?"],
+          ["Effort","What can actually be built?"]
+        ]
+      },
+      {
+        "id": "d3",
+        "type": "divergent",
+        "seconds": 60,
+        "title": "Find unexpected connections.",
+        "hint": "Do not stay inside the obvious category. Borrow ideas from another field.",
+        "prompt": "What are unusual ways a map could be used?",
+        "input": "textarea",
+        "placeholder": "A map can be more than navigation…",
+        "chips": ["education","storytelling","games","science","business","heritage"],
+        "feedback": {
+          "low": "Borrow a concept from another field and apply it to maps.",
+          "mid": "You have several directions. Try crossing two unrelated domains.",
+          "high": "Excellent connection-making. You are using transfer across domains."
+        }
+      },
+      {
+        "id": "c3",
+        "type": "convergent",
+        "seconds": 45,
+        "title": "Evidence beats presentation.",
+        "hint": "Choose the decision rule that most directly reduces uncertainty.",
+        "prompt": "Four proposals cost the same. Which should be selected for the next test?",
+        "input": "choice",
+        "choices": [
+          { "id": "A", "title": "The proposal with the coolest presentation", "description": "Polish is not evidence of impact." },
+          { "id": "B", "title": "The proposal supported by measurable results", "description": "Evidence provides a stronger basis for the next decision." },
+          { "id": "C", "title": "The proposal from the most senior person", "description": "Authority is not outcome evidence." },
+          { "id": "D", "title": "The proposal with the most pages", "description": "Length does not guarantee rigor." }
+        ],
+        "answer": "B",
+        "criteria": [
+          ["Evidence","What do we actually know?"],
+          ["Uncertainty","What remains unknown?"],
+          ["Action","What should happen next?"]
+        ]
+      },
+      {
+        "id": "s1",
+        "type": "switching",
+        "seconds": 90,
+        "title": "Open first. Close second.",
+        "hint": "Spend the first part generating possibilities. Then switch gears and choose ONE testable action.",
+        "prompt": "A school wants to reduce plastic waste. Generate several possible approaches, then choose one to test for the next 30 days. Put your final choice on a new line beginning with “FINAL:”.",
+        "input": "textarea",
+        "placeholder": "Ideas first…\n\nFINAL: …",
+        "chips": ["generate","reframe","compare","select"],
+        "finalMarker": "FINAL:"
+      },
+      {
+        "id": "s2",
+        "type": "switching",
+        "seconds": 90,
+        "title": "Constrain the creative space.",
+        "hint": "Imagine possibilities first. Then use the constraint to force convergence.",
+        "prompt": "You have an empty warehouse. Generate several possible uses, then choose one that could realistically be launched within 30 days with a limited budget. End with “FINAL:”.",
+        "input": "textarea",
+        "placeholder": "Explore several directions…\n\nFINAL: …",
+        "chips": ["explore","constraints","trade-offs","decision"],
+        "finalMarker": "FINAL:"
+      }
+    ]
+  }
+}
