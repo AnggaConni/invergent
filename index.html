@@ -6,447 +6,478 @@
   <meta name="theme-color" content="#f5f5f7">
   <meta name="description" content="Invergent explores how people expand possibilities, narrow decisions, and move between divergent and convergent thinking.">
   <title>Invergent — Think Wider. Decide Better.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#f5f5f7;
-      --ink:#111827;
-      --muted:#667085;
-      --line:rgba(17,24,39,.08);
-      --card:rgba(255,255,255,.72);
-      --white:rgba(255,255,255,.92);
-      --blue:#007aff;
-      --purple:#5856d6;
-      --green:#34c759;
-      --shadow:0 24px 70px rgba(17,24,39,.10),0 4px 14px rgba(17,24,39,.05);
-      --radius:30px;
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #333333;
+      background-color: #ffffff;
+      margin: 0;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      min-height:100vh;
-      color:var(--ink);
-      font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Arial,sans-serif;
-      background:
-        radial-gradient(circle at 12% 2%,rgba(0,122,255,.12),transparent 28%),
-        radial-gradient(circle at 88% 5%,rgba(88,86,214,.11),transparent 25%),
-        radial-gradient(circle at 50% 100%,rgba(52,199,89,.07),transparent 30%),
-        var(--bg);
-      -webkit-font-smoothing:antialiased;
-      text-rendering:optimizeLegibility;
+
+    a { text-decoration: none; color: inherit; }
+    button { font: inherit; }
+
+    .wrap {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
     }
-    a{text-decoration:none;color:inherit}
-    .wrap{width:min(1100px,calc(100% - 32px));margin:0 auto}
-    .nav{
-      height:72px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
+
+    .nav {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
-    .brand{
-      font-weight:800;
-      font-size:18px;
-      letter-spacing:-.03em;
+
+    .brand {
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: -0.03em;
+      color: #002855;
     }
-    .brand-mark{
-      display:inline-grid;
-      place-items:center;
-      width:28px;
-      height:28px;
-      margin-right:8px;
-      border-radius:9px;
-      background:linear-gradient(135deg,var(--blue),var(--purple));
-      color:#fff;
-      font-size:15px;
-      vertical-align:-4px;
-      box-shadow:0 8px 22px rgba(0,122,255,.22);
+
+    .brand-mark {
+      display: inline-grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      margin-right: 8px;
+      border-radius: 8px;
+      background: #002855;
+      color: #ffffff;
+      font-size: 15px;
+      vertical-align: -4px;
     }
-    .nav-note{
-      color:var(--muted);
-      font-size:13px;
+
+    .nav-note {
+      color: #777777;
+      font-size: 13px;
     }
-    main{padding:34px 0 76px}
-    .hero{
-      position:relative;
-      overflow:hidden;
-      padding:78px 56px 52px;
-      border:1px solid rgba(255,255,255,.86);
-      border-radius:36px;
-      background:var(--card);
-      box-shadow:var(--shadow);
-      backdrop-filter:blur(28px);
-      -webkit-backdrop-filter:blur(28px);
+
+    main { padding: 24px 0 70px; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 480px;
+      padding: 58px 56px;
+      border-radius: 4px;
+      background-image:
+        linear-gradient(to right, rgba(0, 40, 85, 0.95) 0%, rgba(0, 40, 85, 0.70) 100%),
+        url('https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+      background-size: cover;
+      background-position: center;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
     }
-    .hero::before,
-    .hero::after{
-      content:"";
-      position:absolute;
-      border-radius:50%;
-      pointer-events:none;
-      filter:blur(2px);
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
     }
-    .hero::before{
-      width:420px;height:420px;
-      right:-180px;top:-170px;
-      background:radial-gradient(circle,rgba(0,122,255,.18),transparent 67%);
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 11px;
+      border: 1px solid rgba(255,255,255,.24);
+      border-radius: 20px;
+      background: rgba(255,255,255,.10);
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
     }
-    .hero::after{
-      width:360px;height:360px;
-      left:-180px;bottom:-210px;
-      background:radial-gradient(circle,rgba(88,86,214,.12),transparent 66%);
+
+    h1 {
+      margin: 18px 0 16px;
+      max-width: 780px;
+      font-size: clamp(44px, 7vw, 78px);
+      line-height: .98;
+      letter-spacing: -.06em;
+      color: #ffffff;
     }
-    .eyebrow{
-      position:relative;
-      z-index:1;
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:8px 12px;
-      border-radius:999px;
-      background:rgba(0,122,255,.08);
-      color:var(--blue);
-      font-size:12px;
-      font-weight:750;
-      letter-spacing:.08em;
-      text-transform:uppercase;
+
+    h1 .accent {
+      color: #9dd7ff;
     }
-    h1{
-      position:relative;
-      z-index:1;
-      max-width:860px;
-      margin:20px 0 18px;
-      font-size:clamp(48px,8vw,88px);
-      line-height:.95;
-      letter-spacing:-.065em;
+
+    .lead {
+      max-width: 760px;
+      margin: 0;
+      color: rgba(255,255,255,.88);
+      font-size: 17px;
+      line-height: 1.65;
     }
-    h1 .accent{
-      background:linear-gradient(90deg,var(--blue),var(--purple));
-      -webkit-background-clip:text;
-      background-clip:text;
-      color:transparent;
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
     }
-    .lead{
-      position:relative;
-      z-index:1;
-      max-width:760px;
-      margin:0;
-      color:#4b5563;
-      font-size:19px;
-      line-height:1.6;
+
+    .hero-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 13px 18px;
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: all .2s ease;
     }
-    .formula{
-      position:relative;
-      z-index:1;
-      margin-top:30px;
-      display:inline-flex;
-      flex-wrap:wrap;
-      align-items:center;
-      gap:10px;
-      padding:12px 14px;
-      border-radius:16px;
-      background:rgba(17,24,39,.045);
-      border:1px solid var(--line);
-      color:#475467;
-      font-size:14px;
-      font-weight:650;
+
+    .hero-btn.primary {
+      background: #ffffff;
+      color: #002855;
     }
-    .formula b{color:#111827}
-    .arrow{color:#98a2b3}
-    .research-note{
-      margin-top:18px;
-      padding:30px 32px;
-      border:1px solid rgba(255,255,255,.84);
-      border-radius:30px;
-      background:rgba(255,255,255,.62);
-      box-shadow:0 18px 55px rgba(17,24,39,.07),0 3px 12px rgba(17,24,39,.04);
-      backdrop-filter:blur(24px);
-      -webkit-backdrop-filter:blur(24px);
+
+    .hero-btn.secondary {
+      background: rgba(255,255,255,.12);
+      color: #ffffff;
+      border: 1px solid rgba(255,255,255,.30);
     }
-    .research-kicker{
-      color:#8a5a00;
-      font-size:12px;
-      font-weight:750;
-      letter-spacing:.08em;
-      text-transform:uppercase;
+
+    .hero-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(0,0,0,.15);
     }
-    .research-note h2{
-      margin:8px 0 12px;
-      font-size:31px;
-      line-height:1.08;
-      letter-spacing:-.04em;
+
+    .hero-note {
+      margin-top: 14px;
+      color: rgba(255,255,255,.68);
+      font-size: 11px;
+      line-height: 1.5;
     }
-    .research-note p{
-      max-width:870px;
-      margin:0 0 13px;
-      color:#667085;
-      line-height:1.65;
-      font-size:14px;
+
+    .formula {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 9px;
+      margin-top: 20px;
+      padding: 10px 12px;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 4px;
+      background: rgba(255,255,255,.08);
+      color: rgba(255,255,255,.86);
+      font-size: 12px;
+      font-weight: 600;
     }
-    .research-takeaway{
-      margin:18px 0;
-      padding:16px 17px;
-      border-radius:18px;
-      background:rgba(0,122,255,.07);
-      border:1px solid rgba(0,122,255,.11);
-      color:#3d556f;
-      font-size:14px;
-      line-height:1.6;
+
+    .formula b { color: #ffffff; }
+    .arrow { color: rgba(255,255,255,.50); }
+
+    .content-section {
+      margin-top: 24px;
+      border: 1px solid #e5e5e5;
+      background: #ffffff;
     }
-    .research-links{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:10px;
-      margin-top:18px;
+
+    .research-note,
+    .explainer {
+      padding: 32px;
+      border: 1px solid #e5e5e5;
+      background: #ffffff;
     }
-    .research-links a{
-      display:block;
-      padding:16px;
-      border-radius:18px;
-      background:rgba(255,255,255,.64);
-      border:1px solid var(--line);
-      transition:.15s ease;
+
+    .research-note { margin-top: 24px; }
+    .explainer { margin-top: 24px; }
+
+    .research-kicker,
+    .explainer-kicker {
+      color: #005eb8;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
     }
-    .research-links a:hover{
-      transform:translateY(-2px);
-      background:#fff;
-      border-color:rgba(0,122,255,.15);
+
+    .research-note h2,
+    .explainer h2 {
+      margin: 8px 0 12px;
+      color: #002855;
+      font-size: 30px;
+      line-height: 1.12;
+      letter-spacing: -.03em;
     }
-    .research-links span{
-      display:block;
-      color:#111827;
-      font-weight:700;
-      font-size:13px;
-      line-height:1.35;
+
+    .research-note p,
+    .explainer-head p {
+      max-width: 900px;
+      margin: 0 0 13px;
+      color: #555555;
+      font-size: 14px;
+      line-height: 1.7;
     }
-    .research-links small{
-      display:block;
-      margin:7px 0 12px;
-      color:#667085;
-      font-size:12px;
-      line-height:1.45;
+
+    .research-takeaway,
+    .explainer-note {
+      margin-top: 18px;
+      padding: 16px 17px;
+      border-left: 3px solid #005eb8;
+      background: #f7f9fb;
+      color: #4b4b4b;
+      font-size: 13px;
+      line-height: 1.6;
     }
-    .research-links b{
-      color:var(--blue);
-      font-size:12px;
+
+    .research-links {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 12px;
+      margin-top: 20px;
     }
-    .research-footnote{
-      margin-top:16px!important;
-      margin-bottom:0!important;
-      font-size:11px!important;
-      color:#98a2b3!important;
+
+    .research-links a,
+    .content-tile {
+      transition: all .2s ease;
+      border: 1px solid #e5e5e5;
+      background: #ffffff;
     }
-    .explainer{
-      margin-top:18px;
-      padding:30px 32px;
-      border:1px solid rgba(255,255,255,.84);
-      border-radius:30px;
-      background:rgba(255,255,255,.66);
-      box-shadow:0 18px 55px rgba(17,24,39,.07),0 3px 12px rgba(17,24,39,.04);
-      backdrop-filter:blur(24px);
-      -webkit-backdrop-filter:blur(24px);
+
+    .research-links a {
+      display: block;
+      padding: 16px;
     }
-    .explainer-head{max-width:820px}
-    .explainer-kicker{
-      color:var(--blue);
-      font-size:12px;
-      font-weight:750;
-      letter-spacing:.08em;
-      text-transform:uppercase;
+
+    .research-links a:hover,
+    .content-tile:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,.08);
     }
-    .explainer h2{
-      margin:8px 0 10px;
-      font-size:32px;
-      line-height:1.08;
-      letter-spacing:-.04em;
+
+    .research-links span {
+      display: block;
+      color: #002855;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 1.4;
     }
-    .explainer-head p{
-      margin:0;
-      color:#667085;
-      line-height:1.65;
-      font-size:15px;
+
+    .research-links small {
+      display: block;
+      margin: 7px 0 12px;
+      color: #666666;
+      font-size: 12px;
+      line-height: 1.45;
     }
-    .thinking-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:12px;
-      margin-top:22px;
+
+    .research-links b {
+      color: #005eb8;
+      font-size: 12px;
     }
-    .thinking-card{
-      display:flex;
-      gap:12px;
-      align-items:flex-start;
-      padding:18px;
-      border-radius:20px;
-      background:rgba(255,255,255,.62);
-      border:1px solid var(--line);
+
+    .research-footnote {
+      margin-top: 16px !important;
+      margin-bottom: 0 !important;
+      color: #888888 !important;
+      font-size: 11px !important;
     }
-    .thinking-symbol{
-      flex:0 0 auto;
-      display:grid;
-      place-items:center;
-      width:40px;
-      height:40px;
-      border-radius:13px;
-      background:rgba(0,122,255,.09);
-      color:var(--blue);
-      font-weight:800;
-      font-size:20px;
+
+    .thinking-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 12px;
+      margin-top: 20px;
     }
-    .thinking-symbol.purple{
-      background:rgba(88,86,214,.10);
-      color:var(--purple);
+
+    .thinking-card,
+    .pillar-card,
+    .author-card {
+      padding: 18px;
+      transition: transform .2s ease, box-shadow .2s ease;
+      border: 1px solid #e5e5e5;
+      background: #ffffff;
     }
-    .thinking-symbol.green{
-      background:rgba(52,199,89,.10);
-      color:#16843a;
+
+    .thinking-card:hover,
+    .pillar-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,.08);
     }
-    .thinking-card h3{
-      margin:0 0 5px;
-      font-size:16px;
-      letter-spacing:-.02em;
+
+    .thinking-card {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
     }
-    .thinking-card p{
-      margin:0;
-      color:#667085;
-      font-size:13px;
-      line-height:1.55;
+
+    .thinking-symbol {
+      flex: 0 0 auto;
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 4px;
+      background: #edf6ff;
+      color: #005eb8;
+      font-weight: 800;
+      font-size: 19px;
     }
-    .explainer-note{
-      margin-top:14px;
-      padding:15px 16px;
-      border-radius:17px;
-      background:rgba(255,149,0,.09);
-      border:1px solid rgba(255,149,0,.14);
-      color:#7c4a00;
-      font-size:13px;
-      line-height:1.55;
+
+    .thinking-symbol.purple {
+      background: #f1efff;
+      color: #5856d6;
     }
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:18px;
-      margin-top:18px;
+
+    .thinking-symbol.green {
+      background: #eef9f1;
+      color: #16843a;
     }
-    .card{
-      position:relative;
-      overflow:hidden;
-      min-height:360px;
-      padding:34px;
-      border:1px solid rgba(255,255,255,.84);
-      border-radius:30px;
-      background:var(--card);
-      box-shadow:var(--shadow);
-      backdrop-filter:blur(26px);
-      -webkit-backdrop-filter:blur(26px);
-      transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+
+    .thinking-card h3 {
+      margin: 0 0 6px;
+      color: #002855;
+      font-size: 15px;
     }
-    .card:hover{
-      transform:translateY(-4px);
-      box-shadow:0 30px 80px rgba(17,24,39,.13),0 5px 18px rgba(17,24,39,.06);
-      border-color:rgba(0,122,255,.14);
+
+    .thinking-card p {
+      margin: 0;
+      color: #666666;
+      font-size: 13px;
+      line-height: 1.55;
     }
-    .card::after{
-      content:"";
-      position:absolute;
-      width:210px;height:210px;
-      right:-80px;bottom:-90px;
-      border-radius:50%;
-      pointer-events:none;
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 18px;
+      margin-top: 24px;
     }
-    .card.profile::after{background:radial-gradient(circle,rgba(0,122,255,.16),transparent 68%)}
-    .card.learn::after{background:radial-gradient(circle,rgba(52,199,89,.15),transparent 68%)}
-    .icon{
-      display:grid;
-      place-items:center;
-      width:58px;height:58px;
-      border-radius:18px;
-      color:#fff;
-      font-size:25px;
-      box-shadow:0 10px 24px rgba(17,24,39,.13);
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      min-height: 330px;
+      padding: 30px;
+      transition: all .2s ease;
+      border: 1px solid #e5e5e5;
+      background: #ffffff;
     }
-    .profile .icon{background:linear-gradient(135deg,#007aff,#5856d6)}
-    .learn .icon{background:linear-gradient(135deg,#34c759,#007aff)}
-    .tag{
-      display:inline-block;
-      margin-top:22px;
-      color:var(--muted);
-      font-size:12px;
-      font-weight:750;
-      letter-spacing:.08em;
-      text-transform:uppercase;
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,.08);
     }
-    h2{
-      margin:8px 0 10px;
-      font-size:30px;
-      line-height:1.08;
-      letter-spacing:-.04em;
+
+    .card .icon {
+      display: grid;
+      place-items: center;
+      width: 52px;
+      height: 52px;
+      border-radius: 4px;
+      color: #ffffff;
+      font-size: 23px;
+      background: #002855;
     }
-    .card p{
-      margin:0;
-      max-width:500px;
-      color:#667085;
-      line-height:1.62;
-      font-size:15px;
+
+    .card.learn .icon { background: #005eb8; }
+
+    .tag {
+      display: inline-block;
+      margin-top: 20px;
+      color: #777777;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
     }
-    .bullets{
-      display:grid;
-      gap:8px;
-      margin:22px 0 28px;
-      color:#475467;
-      font-size:14px;
+
+    .card h2 {
+      margin: 7px 0 10px;
+      color: #002855;
+      font-size: 29px;
+      line-height: 1.08;
+      letter-spacing: -.035em;
     }
-    .bullets span::before{
-      content:"";
-      display:inline-block;
-      width:7px;height:7px;
-      margin:0 10px 1px 0;
-      border-radius:50%;
-      background:currentColor;
-      opacity:.48;
+
+    .card p {
+      margin: 0;
+      max-width: 500px;
+      color: #666666;
+      line-height: 1.65;
+      font-size: 14px;
     }
-    .cta{
-      display:inline-flex;
-      align-items:center;
-      gap:9px;
-      padding:13px 16px;
-      border-radius:999px;
-      color:#fff;
-      background:#111827;
-      font-size:14px;
-      font-weight:750;
-      box-shadow:0 8px 20px rgba(17,24,39,.16);
-      transition:transform .15s ease;
+
+    .bullets {
+      display: grid;
+      gap: 8px;
+      margin: 20px 0 26px;
+      color: #555555;
+      font-size: 13px;
     }
-    .cta:hover{transform:translateY(-1px)}
-    .footer{
-      padding:26px 6px 0;
-      text-align:center;
-      color:#98a2b3;
-      font-size:12px;
-      line-height:1.6;
+
+    .bullets span::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      margin: 0 9px 1px 0;
+      background: #005eb8;
+      border-radius: 50%;
     }
-    .footer strong{color:#667085}
-    @media (max-width:780px){
-      .wrap{width:min(100% - 18px,680px)}
-      .nav{height:62px}
-      main{padding-top:18px}
-      .hero{padding:44px 24px 36px;border-radius:28px}
-      .cards{grid-template-columns:1fr}
-      .thinking-grid{grid-template-columns:1fr}
-      .research-links{grid-template-columns:1fr}
-      .research-note{padding:26px 22px}
-      .research-note h2{font-size:27px}
-      .explainer{padding:26px 22px}
-      .explainer h2{font-size:27px}
-      .card{min-height:auto;padding:28px 24px}
-      .lead{font-size:17px}
-      h1{font-size:54px}
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 15px;
+      border-radius: 4px;
+      color: #ffffff;
+      background: #002855;
+      font-size: 13px;
+      font-weight: 700;
+      transition: all .2s ease;
     }
-    @media (max-width:520px){
-      .nav-note{display:none}
-      h1{font-size:46px}
-      .formula{line-height:1.7}
+
+    .cta:hover {
+      background: #005eb8;
+    }
+
+    .footer {
+      padding: 28px 6px 0;
+      text-align: center;
+      color: #888888;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .footer strong { color: #555555; }
+
+    @media (max-width: 780px) {
+      .wrap { width: min(100% - 18px, 680px); }
+      .nav { height: 62px; }
+      .nav-note { display: none; }
+      main { padding-top: 14px; }
+      .hero { min-height: 520px; padding: 42px 26px; }
+      .thinking-grid,
+      .research-links,
+      .cards { grid-template-columns: 1fr; }
+      .research-note,
+      .explainer { padding: 26px 22px; }
+      .card { min-height: auto; padding: 26px 22px; }
+      .lead { font-size: 16px; }
+      h1 { font-size: 52px; }
+    }
+
+    @media (max-width: 520px) {
+      h1 { font-size: 44px; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .hero-btn { justify-content: center; }
+      .formula { line-height: 1.8; }
     }
   </style>
 </head>
@@ -460,29 +491,41 @@
 
   <main class="wrap">
     <section class="hero">
-      <div class="eyebrow">Divergence × Convergence</div>
+      <div class="hero-content">
+        <div class="eyebrow">Divergence × Convergence</div>
 
-      <h1>
-        Think <span class="accent">wider.</span><br>
-        Decide <span class="accent">better.</span>
-      </h1>
+        <h1>
+          Think <span class="accent">wider.</span><br>
+          Decide <span class="accent">better.</span>
+        </h1>
 
-      <p class="lead">
-        <strong>Invergent</strong> is an experimental space for understanding and training the
-        two complementary movements of thinking: opening the possibility space, then narrowing it
-        into a meaningful direction. The results are <strong>heuristic reflections</strong>, not definitive measures of a person's thinking ability. This is not a test of “who you are”; it is an estimate of which thinking mode may feel more natural in this set of tasks — <strong>opening possibilities (divergent)</strong> or <strong>narrowing them into decisions (convergent)</strong>.
-      </p>
+        <p class="lead">
+          <strong>Invergent</strong> is an experimental space for understanding and training
+          how we move between two complementary modes of thinking:
+          <strong>opening possibilities</strong> and <strong>narrowing them into decisions</strong>.
+        </p>
 
-      <div class="notice" style="position:relative;z-index:1;margin-top:20px;padding:13px 15px;border-radius:16px;background:rgba(255,149,0,.10);border:1px solid rgba(255,149,0,.15);color:#8a4b00;font-size:13px;line-height:1.5">
-        <strong>About the timer:</strong> It is a maximum time, not a target. When you finish an essay response, continue immediately — you do not need to wait for the timer to reach zero.
-      </div>
+        <div class="hero-actions" aria-label="Invergent applications">
+          <a class="hero-btn primary" href="./profile.html">
+            ◌ Explore Your Profile <span aria-hidden="true">→</span>
+          </a>
+          <a class="hero-btn secondary" href="./learn.html">
+            ✦ Start Learning <span aria-hidden="true">→</span>
+          </a>
+        </div>
 
-      <div class="formula" aria-label="Thinking cycle">
-        <b>Explore</b><span class="arrow">→</span>
-        <b>Expand</b><span class="arrow">→</span>
-        <b>Connect</b><span class="arrow">→</span>
-        <b>Focus</b><span class="arrow">→</span>
-        <b>Build</b>
+        <div class="hero-note">
+          Profile = heuristic reflection &nbsp;·&nbsp; Learn = practice lab &nbsp;·&nbsp;
+          Neither is a clinical or validated psychometric test.
+        </div>
+
+        <div class="formula" aria-label="Thinking cycle">
+          <b>Explore</b><span class="arrow">→</span>
+          <b>Expand</b><span class="arrow">→</span>
+          <b>Connect</b><span class="arrow">→</span>
+          <b>Focus</b><span class="arrow">→</span>
+          <b>Build</b>
+        </div>
       </div>
     </section>
 
@@ -577,39 +620,7 @@
       </div>
     </section>
 
-    <section class="cards" aria-label="Invergent tools">
-      <a class="card profile" href="./profile.html">
-        <div class="icon" aria-hidden="true">◌</div>
-        <div class="tag">Discover your pattern</div>
-        <h2>Profile</h2>
-        <p>
-          Explore whether your responses tend to favor <strong>divergent thinking</strong>,
-          <strong>convergent thinking</strong>, or the ability to move between both.
-        </p>
-        <div class="bullets">
-          <span>Heuristic cognitive profile</span>
-          <span>Divergence &amp; convergence dimensions</span>
-          <span>Runs locally in your browser</span>
-        </div>
-        <span class="cta">Explore my profile <span aria-hidden="true">→</span></span>
-      </a>
 
-      <a class="card learn" href="./learn.html">
-        <div class="icon" aria-hidden="true">✦</div>
-        <div class="tag">Practice the skill</div>
-        <h2>Learn</h2>
-        <p>
-          Train yourself to deliberately switch modes: generate more possibilities,
-          recognize constraints, compare alternatives, and make clearer decisions.
-        </p>
-        <div class="bullets">
-          <span>Exercises for divergent thinking</span>
-          <span>Exercises for convergent thinking</span>
-          <span>Practice switching between modes</span>
-        </div>
-        <span class="cta">Start learning <span aria-hidden="true">→</span></span>
-      </a>
-    </section>
 
     <footer class="footer">
       <strong>Divergence creates possibilities.</strong>
