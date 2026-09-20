@@ -117,6 +117,27 @@
           "Convergence creates direction.",
           "Invergent thinking connects the two."
         ]
+      },
+      "assessmentFormat": {
+        "kicker": "A note on assessment format",
+        "title": "Why can a divergent thinker feel “K.O.” by multiple-choice tests?",
+        "keyClaim": "Research does not establish that divergent thinkers are inherently bad at multiple-choice questions. The stronger claim is that open-ended divergent tasks and multiple-choice/convergent formats ask for different response behaviors, and language or terminology can add construct-irrelevant variance when it is not part of the intended construct.",
+        "caveat": "International tests are not inherently worse than local tests. Local assessments can also contain unfamiliar jargon, while well-designed international assessments can reduce language effects.",
+        "term": "construct-irrelevant variance",
+        "sources": [
+          {
+            "title": "ETS — Construct-irrelevant variance",
+            "url": "https://www.ets.org/Media/Research/pdf/RD_Connections8.pdf"
+          },
+          {
+            "title": "ETS — Validity and fairness in assessment",
+            "url": "https://www.ets.org/content/dam/ets-org/pdfs/about/best-practices-validity-fairness-ela.pdf"
+          },
+          {
+            "title": "Frontiers in Education — Divergent thinking assessment",
+            "url": "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2026.1705312/full"
+          }
+        ]
       }
     }
   },
