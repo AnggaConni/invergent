@@ -17,7 +17,8 @@
 <section class="hero" id="intro">
 <div class="eyebrow">Thinking practice lab</div>
 <h1>Train the way your mind moves.</h1>
-<p>Divergent thinking helps you <strong>open the possibility space</strong>. Convergent thinking helps you <strong>narrow it into a decision</strong>. Invergent practice is about learning to move deliberately between the two.</p>
+<p>Divergent thinking helps you <strong>open the possibility space</strong>. Convergent thinking helps you <strong>narrow it into a decision</strong>. Invergent practice is about learning to move deliberately between the two. Session scores are <strong>heuristic practice indicators</strong>, not definitive measures of thinking ability.</p>
+<div style="margin-top:18px;padding:13px 15px;border-radius:16px;background:rgba(0,122,255,.08);border:1px solid rgba(0,122,255,.12);color:#135ea8;font-size:13px;line-height:1.5"><strong>About the timer:</strong> It is a maximum, not a target. Finish early and continue immediately. Waiting for the countdown to reach zero does not make a response more divergent or convergent.</div>
 <div class="mode-grid">
 <div class="mode d"><b>↗ Diverge</b><span>Generate alternatives, associations, perspectives, and unusual possibilities.</span></div>
 <div class="mode c"><b>↘ Converge</b><span>Compare evidence, constraints, trade-offs, and choose a direction.</span></div>
@@ -80,7 +81,7 @@ function render(){
   if(Array.isArray(t.criteria)){const c=document.createElement('div');c.className='criteria';t.criteria.forEach(x=>{const q=document.createElement('div');q.className='criterion';q.innerHTML='<b>'+esc(x[0])+'</b><span>'+esc(x[1])+'</span>';c.appendChild(q)});$('body').appendChild(c)}
  }else{
   const ta=document.createElement('textarea');ta.id='answerInput';ta.placeholder=t.placeholder||'Write one idea per line…';ta.value=state.answers[t.id]?.text||'';$('body').appendChild(ta);
-  const meta=document.createElement('div');meta.className='meta';meta.innerHTML='<span>Keep ideas distinct.</span><span id="wordCount">0 words</span>';$('body').appendChild(meta);
+  const meta=document.createElement('div');meta.className='meta';meta.innerHTML='<span>Done early? Continue immediately.</span><span id="wordCount">0 words</span>';$('body').appendChild(meta);
   if(Array.isArray(t.chips)){const ch=document.createElement('div');ch.className='chips';t.chips.forEach(x=>{const s=document.createElement('span');s.className='chip';s.textContent=x;ch.appendChild(s)});$('body').appendChild(ch)}
   const update=()=>{$('wordCount').textContent=(ta.value.trim().match(/\S+/g)||[]).length+' words'};ta.addEventListener('input',update);update();
  }
