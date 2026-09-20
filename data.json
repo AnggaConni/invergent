@@ -17,6 +17,107 @@
       "home": "./index.html",
       "profile": "./profile.html",
       "learn": "./learn.html"
+    },
+    "content": {
+      "navigation": {
+        "brand": "invergent",
+        "note": "A small experiment in how we think."
+      },
+      "hero": {
+        "eyebrow": "Divergence × Convergence",
+        "title": "Think wider. Decide better.",
+        "lead": "Invergent is an experimental space for understanding and training how we move between two complementary modes of thinking: opening possibilities and narrowing them into decisions.",
+        "actions": [
+          {
+            "label": "Explore Your Profile",
+            "href": "./profile.html",
+            "icon": "◌",
+            "style": "primary"
+          },
+          {
+            "label": "Start Learning",
+            "href": "./learn.html",
+            "icon": "✦",
+            "style": "secondary"
+          }
+        ],
+        "note": "Profile = heuristic reflection · Learn = practice lab · Neither is a clinical or validated psychometric test.",
+        "formula": {
+          "label": "Thinking cycle",
+          "steps": [
+            "Explore",
+            "Expand",
+            "Connect",
+            "Focus",
+            "Build"
+          ]
+        }
+      },
+      "research": {
+        "kicker": "A note on age & divergent thinking",
+        "title": "Does divergent thinking always decline with age?",
+        "paragraphs": [
+          "Some research has found that average divergent-thinking scores can decline with age. For example, a 1987 study using cross-sectional, longitudinal, and cross-sequential analyses reported increases up to early adulthood followed by declines in later age groups. But this is a population-level pattern, not a rule that every individual follows.",
+          "Other research has found preserved or trainable divergent-thinking performance in older adults on particular tasks, while personality research shows that individual differences can remain relatively stable even though people also change across the lifespan."
+        ],
+        "takeaway": {
+          "lead": "So why might someone remain strongly divergent?",
+          "text": "One possibility is that a person's preferred way of approaching problems can remain relatively consistent even while specific cognitive abilities and task performance change with age. Invergent therefore does not claim to measure your lifelong creative trajectory. It asks something narrower: which mode appears more natural in this set of tasks?"
+        },
+        "references": [
+          {
+            "title": "McCrae, Arenberg & Costa (1987)",
+            "description": "Age-related divergent-thinking findings",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/3268202/"
+          },
+          {
+            "title": "Older adults & divergent thinking (2016)",
+            "description": "No overall age difference on selected tasks in one experiment",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/27001170/"
+          },
+          {
+            "title": "Bleidorn et al. (2022)",
+            "description": "Personality can be both stable and changeable across the lifespan",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/35834197/"
+          }
+        ],
+        "footnote": "These studies do not validate Invergent's heuristic scoring. They provide context for why individual differences, age, task design, and personal tendencies should be interpreted carefully."
+      },
+      "explainer": {
+        "kicker": "Before you begin",
+        "title": "What is this actually measuring?",
+        "intro": "Invergent does not tell you what “type of person” you are. It is a heuristic reflection on how your responses behave across different thinking tasks. In other words, it looks for which mode may feel more natural or comfortable in this task set.",
+        "modes": [
+          {
+            "name": "Divergent",
+            "symbol": "↗",
+            "description": "How naturally do you open the possibility space — generating alternatives, associations, perspectives, and unusual ideas?"
+          },
+          {
+            "name": "Convergent",
+            "symbol": "↘",
+            "colorClass": "purple",
+            "description": "How naturally do you narrow the possibility space — comparing options, applying constraints, and choosing a direction?"
+          },
+          {
+            "name": "Switching",
+            "symbol": "⇄",
+            "colorClass": "green",
+            "description": "How easily do you move from “let’s explore” to “now let’s decide” when the task asks you to change gears?"
+          }
+        ],
+        "note": {
+          "lead": "One important distinction:",
+          "text": "finishing a task quickly does not automatically make a response convergent. Convergence is about narrowing, comparing, prioritizing, and choosing — not simply being fast. The timer is a maximum, not a target, so when you are done, you can continue immediately."
+        }
+      },
+      "footer": {
+        "parts": [
+          "Divergence creates possibilities.",
+          "Convergence creates direction.",
+          "Invergent thinking connects the two."
+        ]
+      }
     }
   },
   "meta": {
