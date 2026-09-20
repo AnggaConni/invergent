@@ -153,6 +153,89 @@
     }
     .formula b{color:#111827}
     .arrow{color:#98a2b3}
+    .research-note{
+      margin-top:18px;
+      padding:30px 32px;
+      border:1px solid rgba(255,255,255,.84);
+      border-radius:30px;
+      background:rgba(255,255,255,.62);
+      box-shadow:0 18px 55px rgba(17,24,39,.07),0 3px 12px rgba(17,24,39,.04);
+      backdrop-filter:blur(24px);
+      -webkit-backdrop-filter:blur(24px);
+    }
+    .research-kicker{
+      color:#8a5a00;
+      font-size:12px;
+      font-weight:750;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+    .research-note h2{
+      margin:8px 0 12px;
+      font-size:31px;
+      line-height:1.08;
+      letter-spacing:-.04em;
+    }
+    .research-note p{
+      max-width:870px;
+      margin:0 0 13px;
+      color:#667085;
+      line-height:1.65;
+      font-size:14px;
+    }
+    .research-takeaway{
+      margin:18px 0;
+      padding:16px 17px;
+      border-radius:18px;
+      background:rgba(0,122,255,.07);
+      border:1px solid rgba(0,122,255,.11);
+      color:#3d556f;
+      font-size:14px;
+      line-height:1.6;
+    }
+    .research-links{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:10px;
+      margin-top:18px;
+    }
+    .research-links a{
+      display:block;
+      padding:16px;
+      border-radius:18px;
+      background:rgba(255,255,255,.64);
+      border:1px solid var(--line);
+      transition:.15s ease;
+    }
+    .research-links a:hover{
+      transform:translateY(-2px);
+      background:#fff;
+      border-color:rgba(0,122,255,.15);
+    }
+    .research-links span{
+      display:block;
+      color:#111827;
+      font-weight:700;
+      font-size:13px;
+      line-height:1.35;
+    }
+    .research-links small{
+      display:block;
+      margin:7px 0 12px;
+      color:#667085;
+      font-size:12px;
+      line-height:1.45;
+    }
+    .research-links b{
+      color:var(--blue);
+      font-size:12px;
+    }
+    .research-footnote{
+      margin-top:16px!important;
+      margin-bottom:0!important;
+      font-size:11px!important;
+      color:#98a2b3!important;
+    }
     .explainer{
       margin-top:18px;
       padding:30px 32px;
@@ -351,6 +434,9 @@
       .hero{padding:44px 24px 36px;border-radius:28px}
       .cards{grid-template-columns:1fr}
       .thinking-grid{grid-template-columns:1fr}
+      .research-links{grid-template-columns:1fr}
+      .research-note{padding:26px 22px}
+      .research-note h2{font-size:27px}
       .explainer{padding:26px 22px}
       .explainer h2{font-size:27px}
       .card{min-height:auto;padding:28px 24px}
@@ -398,6 +484,53 @@
         <b>Focus</b><span class="arrow">→</span>
         <b>Build</b>
       </div>
+    </section>
+
+    <section class="research-note" aria-label="Research context">
+      <div class="research-kicker">A note on age &amp; divergent thinking</div>
+      <h2>Does divergent thinking always decline with age?</h2>
+      <p>
+        Some research has found that <strong>average divergent-thinking scores can decline with age</strong>.
+        For example, a 1987 study using cross-sectional, longitudinal, and cross-sequential analyses
+        reported increases up to early adulthood followed by declines in later age groups. But this is
+        a <strong>population-level pattern</strong>, not a rule that every individual follows.
+      </p>
+      <p>
+        Other research has found preserved or trainable divergent-thinking performance in older adults
+        on particular tasks, while personality research shows that individual differences can remain
+        relatively stable even though people also change across the lifespan.
+      </p>
+
+      <div class="research-takeaway">
+        <strong>So why might someone remain strongly divergent?</strong>
+        One possibility is that a person's preferred way of approaching problems can remain relatively
+        consistent even while specific cognitive abilities and task performance change with age.
+        Invergent therefore does <strong>not</strong> claim to measure your lifelong creative trajectory.
+        It asks something narrower: <strong>which mode appears more natural in this set of tasks?</strong>
+      </div>
+
+      <div class="research-links">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/3268202/" target="_blank" rel="noopener noreferrer">
+          <span>McCrae, Arenberg &amp; Costa (1987)</span>
+          <small>Age-related divergent-thinking findings</small>
+          <b>Read on PubMed ↗</b>
+        </a>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/27001170/" target="_blank" rel="noopener noreferrer">
+          <span>Older adults &amp; divergent thinking (2016)</span>
+          <small>No overall age difference on selected tasks in one experiment</small>
+          <b>Read on PubMed ↗</b>
+        </a>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/35834197/" target="_blank" rel="noopener noreferrer">
+          <span>Bleidorn et al. (2022)</span>
+          <small>Personality can be both stable and changeable across the lifespan</small>
+          <b>Read on PubMed ↗</b>
+        </a>
+      </div>
+
+      <p class="research-footnote">
+        These studies do not validate Invergent's heuristic scoring. They provide context for why
+        individual differences, age, task design, and personal tendencies should be interpreted carefully.
+      </p>
     </section>
 
     <section class="explainer" aria-label="How Invergent works">
