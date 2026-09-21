@@ -16,7 +16,8 @@
     "pages": {
       "home": "./index.html",
       "profile": "./profile.html",
-      "learn": "./learn.html"
+      "learn": "./learn.html",
+      "mental": "./mental.html"
     },
     "content": {
       "navigation": {
@@ -796,5 +797,20 @@
         "finalMarker": "FINAL:"
       }
     ]
+  },
+  "content": {
+    "navigation": {
+      "mental": "Mental Model Lab"
+    },
+    "hero": {
+      "actions": [
+        {
+          "label": "Mental Model Lab",
+          "href": "./mental.html",
+          "icon": "◉",
+          "style": "tertiary"
+        }
+      ]
+    }
   }
 }
