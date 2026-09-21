@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#002855">
+<title>Invergent — Mental Model Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f5f7;--card:rgba(255,255,255,.82);--ink:#111827;--muted:#667085;--line:rgba(17,24,39,.08);--blue:#002855;--green:#34c759;--orange:#ff9500;--red:#ff3b30;--shadow:0 22px 65px rgba(17,24,39,.10),0 3px 12px rgba(17,24,39,.05);--radius:26px}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,sans-serif;color:var(--ink);background:linear-gradient(180deg,#fbfbfc 0%,#f5f5f7 100%);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button,input,textarea{font:inherit}
+.wrap{width:min(1120px,calc(100% - 32px));margin:0 auto}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-weight:800;color:var(--blue);font-size:18px}
+.brand img{width:34px;height:34px;vertical-align:middle;margin-right:8px;border-radius:10px}
+.nav a{color:#5b6472;font-weight:700;font-size:13px}
+.hero{padding:42px 0 20px}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+h1{font-size:clamp(38px,6vw,68px);line-height:.98;letter-spacing:-.055em;margin:12px 0 18px}
+.lead{font-size:18px;line-height:1.7;color:#4b5563;max-width:860px}
+.grid{display:grid;gap:18px}
+.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{background:var(--card);backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px}
+.muted{color:var(--muted);line-height:1.65}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:7px 10px;border-radius:999px;background:#eef3f8;color:var(--blue);font-size:11px;font-weight:800}
+.case{font-size:22px;line-height:1.5;font-weight:800;margin:18px 0}
+.hyp-list{display:grid;gap:10px;margin:14px 0}
+.hyp{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;background:#fff;border:1px solid var(--line);border-radius:16px}
+.hyp input{margin-top:4px}
+.controls{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.btn{border:0;border-radius:14px;padding:12px 16px;font-weight:800;cursor:pointer}
+.btn.primary{background:var(--blue);color:#fff}
+.btn.secondary{background:#fff;border:1px solid var(--line);color:var(--ink)}
+.btn.success{background:#eaf8ef;color:#167a36}
+.btn.warn{background:#fff5e6;color:#9a5a00}
+.answer{display:none;margin-top:18px;padding:18px;border-radius:18px;background:#f8fafc;border:1px solid var(--line)}
+.answer.show{display:block}
+.score{font-size:42px;font-weight:800;color:var(--blue)}
+.step{display:flex;gap:12px;align-items:flex-start}
+.num{width:32px;height:32px;border-radius:10px;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:12px;font-weight:800;flex:0 0 auto}
+.progress{height:8px;border-radius:999px;background:#e8ebef;overflow:hidden}
+.progress>div{height:100%;width:0;background:linear-gradient(90deg,#34c759,#007aff);transition:width .35s}
+.pillrow{display:flex;flex-wrap:wrap;gap:8px}
+.pill{padding:8px 11px;border-radius:999px;background:#fff;border:1px solid var(--line);font-size:12px}
+.small{font-size:12px;color:#697386}
+@media(max-width:760px){.two,.three{grid-template-columns:1fr}.nav{height:64px}.hero{padding-top:28px}}
+</style>
+</head>
+<body>
+<header class="wrap nav">
+  <a class="brand" href="./index.html"><img src="./invergent.png" alt="">invergent</a>
+  <a href="./index.html">← Back home</a>
+</header>
+
+<main class="wrap">
+<section class="hero">
+  <div class="eyebrow">Mental Model Lab</div>
+  <h1>Train yourself to <span style="color:#34c759">diverge first</span> — then converge.</h1>
+  <p class="lead">This lab trains a practical two-model habit: use one model to open possibilities, and a second model to challenge your assumptions before you close the explanation. The goal is not to become endlessly uncertain. The goal is to reduce premature judgment.</p>
+</section>
+
+<section class="card">
+  <div class="badge">🧠 Two-model reasoning</div>
+  <h2>Model A + Model B</h2>
+  <div class="grid two">
+    <div>
+      <h3>Model A — Divergent</h3>
+      <p class="muted">Ask: “What else could explain this?” Generate at least three plausible hypotheses. Search for hidden variables.</p>
+    </div>
+    <div>
+      <h3>Model B — Inclusive / Husnuzan-Tepa Selira Lens</h3>
+      <p class="muted">Ask: “What context might I be missing?” Separate observation from interpretation. Consider the other person's constraints before assigning motive.</p>
+    </div>
+  </div>
+</section>
+
+<section class="card" style="margin-top:18px">
+  <div class="badge">Scenario 01</div>
+  <div class="case">“They still talk to their ex.”</div>
+  <p class="muted">You are allowed to choose more than one hypothesis. The point is to keep the model open before you decide.</p>
+  <div class="hyp-list" id="q1">
+    <label class="hyp"><input type="checkbox" value="1"> They may still have unresolved feelings.</label>
+    <label class="hyp"><input type="checkbox" value="2"> Their families / social networks may still be connected.</label>
+    <label class="hyp"><input type="checkbox" value="3"> There may be practical, professional, or logistical reasons.</label>
+    <label class="hyp"><input type="checkbox" value="4"> They may simply have become friends.</label>
+    <label class="hyp"><input type="checkbox" value="5"> The behaviour itself proves they have not moved on.</label>
+  </div>
+  <div class="controls">
+    <button class="btn primary" onclick="scoreQ1()">Check my divergence</button>
+    <button class="btn secondary" onclick="showQ1()">Show learning point</button>
+  </div>
+  <div id="a1" class="answer"></div>
+</section>
+
+<section class="card" style="margin-top:18px">
+  <div class="badge">Scenario 02</div>
+  <div class="case">“My colleague did not reply to my message.”</div>
+  <div class="grid two">
+    <div>
+      <h3>Step 1 — Observation</h3>
+      <textarea id="obs" rows="4" style="width:100%;padding:13px;border:1px solid var(--line);border-radius:16px;resize:vertical" placeholder="Write only what you know happened..."></textarea>
+    </div>
+    <div>
+      <h3>Step 2 — First interpretation</h3>
+      <textarea id="interp" rows="4" style="width:100%;padding:13px;border:1px solid var(--line);border-radius:16px;resize:vertical" placeholder="What story did your brain create?"></textarea>
+    </div>
+  </div>
+  <div class="controls">
+    <button class="btn primary" onclick="revealQ2()">Reveal the two-model check</button>
+  </div>
+  <div id="a2" class="answer"></div>
+</section>
+
+<section class="card" style="margin-top:18px">
+  <div class="badge">Scenario 03</div>
+  <div class="case">A person is late to a meeting.</div>
+  <p class="muted">Choose the question that best protects against premature closure.</p>
+  <div class="hyp-list">
+    <label class="hyp"><input type="radio" name="q3" value="a"> “Why are they always irresponsible?”</label>
+    <label class="hyp"><input type="radio" name="q3" value="b"> “What evidence proves they don't care?”</label>
+    <label class="hyp"><input type="radio" name="q3" value="c"> “What else could explain the delay, and what information would distinguish those explanations?”</label>
+    <label class="hyp"><input type="radio" name="q3" value="d"> “Should I immediately label this a pattern?”</label>
+  </div>
+  <button class="btn primary" onclick="scoreQ3()">Check</button>
+  <div id="a3" class="answer"></div>
+</section>
+
+<section class="card" style="margin-top:18px">
+  <div class="badge">Your reasoning loop</div>
+  <h2>Practice the switch</h2>
+  <div class="grid two">
+    <div>
+      <div class="step"><div class="num">1</div><div><strong>Observe</strong><div class="small">What actually happened?</div></div></div><br>
+      <div class="step"><div class="num">2</div><div><strong>Diverge</strong><div class="small">What else could explain it?</div></div></div><br>
+      <div class="step"><div class="num">3</div><div><strong>Investigate</strong><div class="small">What information would distinguish the hypotheses?</div></div></div>
+    </div>
+    <div>
+      <div class="step"><div class="num">4</div><div><strong>Converge</strong><div class="small">Which explanation is best supported?</div></div></div><br>
+      <div class="step"><div class="num">5</div><div><strong>Close</strong><div class="small">Adopt a working model.</div></div></div><br>
+      <div class="step"><div class="num">6</div><div><strong>Reopen</strong><div class="small">What new evidence would change your mind?</div></div></div>
+    </div>
+  </div>
+  <div style="margin-top:22px" class="progress"><div id="prog"></div></div>
+  <p class="small" style="margin-top:10px">Training principle: divergence without convergence can become analysis paralysis; convergence without divergence can become premature judgment.</p>
+</section>
+
+<section class="card" style="margin:18px 0 50px">
+  <div class="badge">Final prompt</div>
+  <h2>Before you judge someone, ask two questions.</h2>
+  <div class="grid two">
+    <div style="padding:20px;background:#eefbf1;border-radius:20px">
+      <div class="small">MODEL A — DIVERGE</div>
+      <div style="font-size:22px;font-weight:800;margin-top:6px">“What else could explain this?”</div>
+    </div>
+    <div style="padding:20px;background:#eef3f8;border-radius:20px">
+      <div class="small">MODEL B — CONTEXT</div>
+      <div style="font-size:22px;font-weight:800;margin-top:6px">“What might I not know about their context?”</div>
+    </div>
+  </div>
+  <p class="muted" style="margin-top:20px">Then investigate. Then converge. You are not training yourself to trust everyone. You are training yourself to avoid treating your first interpretation as established fact.</p>
+</section>
+</main>
+
+<script>
+function qsel(id){return [...document.querySelectorAll('#'+id+' input:checked')].map(x=>x.value)}
+function scoreQ1(){
+  const v=qsel('q1'), box=document.getElementById('a1');
+  const bonus=v.includes('1')+v.includes('2')+v.includes('3')+v.includes('4');
+  let msg = bonus>=3
+    ? 'Good divergence. You opened the hypothesis space and considered multiple plausible explanations. The key next step is investigation: which evidence would distinguish them?'
+    : 'Try widening the space. One explanation is not enough for a divergence exercise. Ask “what else?” before you converge.';
+  box.innerHTML='<strong>'+msg+'</strong><p class="small">The last option — “the behaviour itself proves it” — is a conclusion, not a hypothesis. It closes the model too early.</p>';
+  box.classList.add('show'); updateProgress();
+}
+function showQ1(){
+  const box=document.getElementById('a1');
+  box.innerHTML='<strong>Learning point:</strong> chatting with an ex is an observation. “Not over the ex” is an interpretation. The divergence move is to ask why and generate plausible alternatives before deciding.';
+  box.classList.add('show'); updateProgress();
+}
+function revealQ2(){
+  const o=document.getElementById('obs').value.trim(), i=document.getElementById('interp').value.trim(), box=document.getElementById('a2');
+  box.innerHTML='<strong>Two-model check:</strong><p><b>Observation:</b> '+(o||'Write the observable fact without a motive attached.')+'</p><p><b>Interpretation:</b> '+(i||'Write the story your brain produced.')+'</p><p><b>Divergent question:</b> What else could explain the non-response?</p><p><b>Context question:</b> What might I not know about the colleague’s situation?</p><p><b>Convergence:</b> only after gathering enough evidence, choose a working explanation.</p>';
+  box.classList.add('show'); updateProgress();
+}
+function scoreQ3(){
+  const val=document.querySelector('input[name="q3"]:checked')?.value, box=document.getElementById('a3');
+  box.innerHTML=val==='c'
+    ? '<strong>Correct reasoning move.</strong> This question both diverges and creates an investigation path.'
+    : '<strong>Not yet.</strong> The goal is to expand possible explanations and identify evidence that can distinguish them.';
+  box.classList.add('show'); updateProgress();
+}
+function updateProgress(){
+  const shown=document.querySelectorAll('.answer.show').length;
+  document.getElementById('prog').style.width=Math.min(100,shown/3*100)+'%';
+}
+</script>
+</body>
+</html>
